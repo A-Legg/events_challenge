@@ -9,42 +9,61 @@
     <table>
       <thead>
         <tr>
-          <th>Track 1</th>
-          <th>Track 2</th>
-          <th>Track 3</th>
-          <th>Track 4</th>
-          <th>Track 5</th>
+          <th>Time</th>
+          <th>Track 1 - Pattern Recognition</th>
+          <th>Track 2 - Image, Speech, and Signal Processing</th>
+          <th>Track 3 - Document Analysis</th>
+          <th>Track 4 - Biometrics</th>
+          <th>Track 5 - Bioinformatics</th>
         </tr>
       </thead>
       <tbody>
-      <% @day_one_events.track_five.each do |event| %>
+            <% @day_one_events.track_one.each do |track_one| %>
         <tr>
-          <td><%= event.start %></td>
-          <td><%= event.finish %></td>
-          <td><%= event.name %> </td>
-          <td><%= event.track %></td> 
-        </tr>
-        <% end %>
+          <td></td>      
+          <td><%= track_one.name %></td>
+          <td></td>        
+          <td> </td>
+          <td></td> 
+          <td></td>
+           <% end %>      
+        </tr> 
+         
+
       </tbody>
+  
+      
     </table>
   </div>
+  
+
+
+
+
+
+
+
   <div class="content" id="panel2">
       <table>
         <thead>
-          <tr>
-            <th>Start</th>
-            <th>Finish</th>
-            <th>Name</th>
-            <th>track</th>
-          </tr>
-        </thead>
+        <tr>
+          <th>Time</th>
+          <th>Track 1 - Pattern Recognition</th>
+          <th>Track 2 - Image, Speech, and Signal Processing</th>
+          <th>Track 3 - Document Analysis</th>
+          <th>Track 4 - Biometrics</th>
+          <th>Track 5 - Bioinformatics</th>
+        </tr>
+      </thead>
         <tbody>
         <% @day_two_events.each do |event| %>
           <tr>
+            <td></td>
             <td><%= event.start %></td>
             <td><%= event.finish %></td>
             <td><%= event.name %> </td>
             <td><%= event.track %></td>
+            <td></td>
           </tr>
           <% end %>
         </tbody>
