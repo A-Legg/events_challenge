@@ -4,8 +4,7 @@
   <li class="tab-title"><a href="#panel2">Day 2</a></li>
 </ul>
 <div class="tabs-content">
-  <div class="content active" id="panel1">
-    
+  <div class="content active" id="panel1">  
     <table>
       <thead>
         <tr>
@@ -18,9 +17,9 @@
         </tr>
       </thead>
       <tbody>
-            <% @day_one_events.track_one.each do |track_one| %>
+        <% @day_one_events.track_one.each do |track_one| %>
         <tr>
-          <td></td>      
+          <td><%= track_one.start %></td>      
           <td><%= track_one.name %></td>
           <td></td>        
           <td> </td>
@@ -28,21 +27,9 @@
           <td></td>
            <% end %>      
         </tr> 
-         
-
       </tbody>
-  
-      
     </table>
   </div>
-  
-
-
-
-
-
-
-
   <div class="content" id="panel2">
       <table>
         <thead>
@@ -56,13 +43,13 @@
         </tr>
       </thead>
         <tbody>
-        <% @day_two_events.each do |event| %>
-          <tr>
+        <% @day_two_events.track_one.each do |track_one| %>
+          <tr>         
+            <td><%= track_one.start %></td>
+            <td><%= track_one.name %> </td>
             <td></td>
-            <td><%= event.start %></td>
-            <td><%= event.finish %></td>
-            <td><%= event.name %> </td>
-            <td><%= event.track %></td>
+            <td></td>
+            <td></td>
             <td></td>
           </tr>
           <% end %>
