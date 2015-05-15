@@ -1,0 +1,41 @@
+<% @day_one_events.each do |event| %>
+<table>
+  <thead>
+    <tr>
+      <th width="200">Start</th>
+      <th>Finish</th>
+      <th width="150">Name</th>
+      <th width="150">track</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= event.start %></td>
+      <td><%= event.finish %></td>
+      <td><%= event.name %> </td>
+      <td><%= event.track %></td>
+    </tr>
+  </tbody>
+</table>
+<% end %>
+
+<% @day_two_events.each do |event| %>
+<table>
+  <thead>
+    <tr>
+      <th>Start</th>
+      <th>Finish</th>
+      <th>Name</th>
+      <th>track</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= event.start %></td>
+      <td><%= event.finish %></td>
+      <td><%= event.name %> </td>
+      <td><%= event.track %></td>
+    </tr>
+  </tbody>
+</table>
+<% end %>
