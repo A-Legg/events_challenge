@@ -5,29 +5,30 @@
 </ul>
 <div class="tabs-content">
   <div class="content active" id="panel1">
-    <% @day_one_events.each do |event| %>
+    
     <table>
       <thead>
         <tr>
-          <th width="200">Start</th>
-          <th>Finish</th>
-          <th width="150">Name</th>
-          <th width="150">track</th>
+          <th>Track 1</th>
+          <th>Track 2</th>
+          <th>Track 3</th>
+          <th>Track 4</th>
+          <th>Track 5</th>
         </tr>
       </thead>
       <tbody>
+      <% @day_one_events.track_five.each do |event| %>
         <tr>
           <td><%= event.start %></td>
           <td><%= event.finish %></td>
           <td><%= event.name %> </td>
-          <td><%= event.track %></td>
-          <% end %>
+          <td><%= event.track %></td> 
         </tr>
+        <% end %>
       </tbody>
     </table>
   </div>
   <div class="content" id="panel2">
-    <% @day_two_events.each do |event| %>
       <table>
         <thead>
           <tr>
@@ -38,13 +39,14 @@
           </tr>
         </thead>
         <tbody>
+        <% @day_two_events.each do |event| %>
           <tr>
             <td><%= event.start %></td>
             <td><%= event.finish %></td>
             <td><%= event.name %> </td>
             <td><%= event.track %></td>
-            <% end %>
           </tr>
+          <% end %>
         </tbody>
       </table>     
   <div>
